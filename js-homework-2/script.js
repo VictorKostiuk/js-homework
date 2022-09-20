@@ -1,12 +1,19 @@
-let a = +prompt("Enter your ticket code(6 characters)")
+// Завдання 1
+
+// let num = +prompt("Enter your number(3 characters)")
+// alert(Math.trunc(num%10) + '' + Math.trunc((num%100)/10) + '' + Math.trunc((num%1000)/100))
+
+// Завдання 2
+
+let ticketNumber = +prompt("Enter your ticket code(6 characters)")
 let myFunc = num => Number(num)
-let intArr = Array.from(String(a), myFunc)
+let intArr = Array.from(String(ticketNumber), myFunc)
 let poArr = [], ptArr = []
 
-if (checkCondition(String(a))) {
+if (checkCondition(ticketNumber)) {
     do {
-        a = +prompt("Your code isn`t valid. Try again!")
-    } while (checkCondition(String(a)))
+        ticketNumber = +prompt("Your code isn`t valid. Try again!")
+    } while (checkCondition(ticketNumber))
 }
 
 for (let i = 0; i < 6; i++) {
@@ -25,5 +32,6 @@ function sumArr(arr) {
 
 
 function checkCondition(value) {
-    return isNaN(value) ||  value <= 0 || value.length !== 6
+    debugger
+    return isNaN(value) || String(value).length !== 6
 }
