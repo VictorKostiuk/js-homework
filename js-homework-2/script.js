@@ -32,6 +32,5 @@ function sumArr(arr) {
 
 
 function checkCondition(value) {
-    debugger
     return isNaN(value) || String(value).length !== 6
 }
